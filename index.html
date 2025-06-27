@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfolio Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons CDN for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <h1>Mini Portfolio Generator</h1>
+            <p>Create your professional portfolio in minutes</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <div class="tab-nav">
+                <button id="formTab" class="tab-btn active" data-tab="form">
+                    <i data-lucide="user"></i>
+                    Edit Details
+                </button>
+                <button id="previewTab" class="tab-btn" data-tab="preview">
+                    <i data-lucide="eye"></i>
+                    Preview
+                </button>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div id="formSection" class="tab-content active">
+            <div class="form-container">
+                <h2>Personal Information</h2>
+                
+                <!-- Basic Info -->
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Professional Title</label>
+                            <input type="text" id="title" name="title" placeholder="Full Stack Developer" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="about">About Me</label>
+                        <textarea id="about" name="about" rows="4" placeholder="Tell us about yourself..." required></textarea>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="form-section">
+                    <h3>Social Links</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="github">GitHub Username</label>
+                            <input type="text" id="github" name="github" placeholder="johndoe">
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn Username</label>
+                            <input type="text" id="linkedin" name="linkedin" placeholder="johndoe">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="skills">Skills (comma-separated)</label>
+                        <input type="text" id="skills" name="skills" placeholder="JavaScript, React, Node.js, Python" required>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <h3>Projects</h3>
+                        <button type="button" id="addProject" class="btn btn-secondary">
+                            <i data-lucide="plus"></i>
+                            Add Project
+                        </button>
+                    </div>
+                    <div id="projectsContainer">
+                        <!-- Projects will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="form-actions">
+                    <button type="button" id="previewBtn" class="btn btn-primary">
+                        <i data-lucide="eye"></i>
+                        Preview Portfolio
+                    </button>
+                    <button type="button" id="downloadBtn" class="btn btn-success">
+                        <i data-lucide="download"></i>
+                        Download Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview Section -->
+        <div id="previewSection" class="tab-content">
+            <div class="preview-container">
+                <div class="preview-header">
+                    <h3>Portfolio Preview</h3>
+                    <button type="button" id="downloadPreviewBtn" class="btn btn-success">
+                        <i data-lucide="download"></i>
+                        Download
+                    </button>
+                </div>
+                <div class="preview-frame">
+                    <iframe id="portfolioPreview" title="Portfolio Preview"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Template (hidden) -->
+    <template id="projectTemplate">
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-number">Project 1</span>
+                <button type="button" class="remove-project" title="Remove Project">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" class="project-name" placeholder="Project Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="project-tech" placeholder="Technologies Used">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <textarea class="project-description" rows="2" placeholder="Project Description" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="url" class="project-link" placeholder="Project Link (GitHub, Live Demo, etc.)">
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
