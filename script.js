@@ -1,35 +1,35 @@
 // Portfolio Generator JavaScript
 class PortfolioGenerator {
-    constructor() {
-        // Initialize form data with default values
-        this.formData = {
-            name: 'John Doe',
-            title: 'Full Stack Developer',
-            about: 'Passionate computer science student with experience in web development and problem-solving. Always eager to learn new technologies and contribute to meaningful projects.',
-            email: 'john.doe@email.com',
-            phone: '+1 (555) 123-4567',
-            github: 'johndoe',
-            linkedin: 'johndoe',
-            skills: 'JavaScript, React, Node.js, Python, HTML/CSS, Git',
-            projects: [
-                {
-                    name: 'Weather App',
-                    description: 'A responsive weather application built with React and OpenWeather API',
-                    tech: 'React, JavaScript, CSS',
-                    link: 'https://github.com/johndoe/weather-app'
-                },
-                {
-                    name: 'Task Manager',
-                    description: 'Full-stack task management system with user authentication',
-                    tech: 'Node.js, Express, MongoDB',
-                    link: 'https://github.com/johndoe/task-manager'
-                }
-            ]
-        };
+    // constructor() {
+    //     // Initialize form data with default values
+    //     this.formData = {
+    //         name: 'John Doe',
+    //         title: 'Full Stack Developer',
+    //         about: 'Passionate computer science student with experience in web development and problem-solving. Always eager to learn new technologies and contribute to meaningful projects.',
+    //         email: 'john.doe@email.com',
+    //         phone: '+1 (555) 123-4567',
+    //         github: 'johndoe',
+    //         linkedin: 'johndoe',
+    //         skills: 'JavaScript, React, Node.js, Python, HTML/CSS, Git',
+    //         projects: [
+    //             {
+    //                 name: 'Weather App',
+    //                 description: 'A responsive weather application built with React and OpenWeather API',
+    //                 tech: 'React, JavaScript, CSS',
+    //                 link: 'https://github.com/johndoe/weather-app'
+    //             },
+    //             {
+    //                 name: 'Task Manager',
+    //                 description: 'Full-stack task management system with user authentication',
+    //                 tech: 'Node.js, Express, MongoDB',
+    //                 link: 'https://github.com/johndoe/task-manager'
+    //             }
+    //         ]
+    //     };
 
-        this.projectCounter = 0;
-        this.init();
-    }
+    //     this.projectCounter = 0;
+    //     this.init();
+    // }
 
     // Initialize the application
     init() {
